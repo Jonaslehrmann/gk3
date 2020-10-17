@@ -1,4 +1,4 @@
-const users = require('../HardUser')
+const users = require('../userHardCode')
 var jwt = require('jsonwebtoken');
 
 

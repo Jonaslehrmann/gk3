@@ -1,4 +1,4 @@
-users = require('../HardUser')
+users = require('../userHardCode')
 var jwt = require('jsonwebtoken');
 
 function loginController(req, res) {
