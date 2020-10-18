@@ -5,14 +5,12 @@ const port = 3000
 
 
 const userController = require('./controller/userController')
-const protectedController = require('./controller/Protectedcontroller')
+const protectedController = require('./controller/protectedController')
 const loginController = require('./controller/loginController')
-
-const ensureToken = require('./Middleware/ensureToken')
+const ensureToken = require('./token/ensureToken')
 
 server.get('/', userController)
-
-server.get('/protected', ensureToken,  protectedController)
+server.get('./controller/protectedController', ensureToken,  protectedController)
 
 
 server.post('/login', loginController)
@@ -20,4 +18,4 @@ server.post('/login', loginController)
 server.listen(port, () => {
   console.log(`Server-applikation lytter på http://localhost:${port}`)
 })
-console.log(`Server-applikation lytter på http://localhost:${port}`)
+

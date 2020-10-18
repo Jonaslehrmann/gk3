@@ -4,7 +4,6 @@ var jwt = require('jsonwebtoken');
 
 
 function loginController(req, res) {
-    //Normalt vil man kigge om password og brugernavn stemmer, men det springer vi over
     var user = users[0]
     //normalt vil man gemme secret key et andet sted. 
     //Her laves en token, som dÃ¸r om en time 
