@@ -2,7 +2,7 @@ users = require('../userHardCode')
 var jwt = require('jsonwebtoken');
 
 function loginController(req, res) {
-    //man kunne ogsÃ¥ tjekke her om token findes. 
+    //man kunne også tjekke her om token findes. 
     jwt.verify(req.token, 'my_secret', function(err, data){
         if(err){
             res.sendStatus(403);
