@@ -1,5 +1,5 @@
 const express = require('express')
-const server = express()
+const app = express()
 const port = 3000
 
 
@@ -8,11 +8,11 @@ const protectedController = require('../controller/protectedController')
 const loginController = require('../controller/loginController')
 const ensureToken = require('../token/ensuretoken')
 
-server.get('/', userController)
-server.get('../controller/protectedController', ensureToken,  protectedController)
+app.get('/', userController)
+app.get('../controller/protectedController', ensureToken,  protectedController)
 
 
-server.post('/login', loginController)
+app.post('/login', loginController)
 //GET is used to retrieve data from the database
 //POST is used to send to the database
 //PUT is used to update existing resources. It repalces the entire resource and doesn't do partial updates
